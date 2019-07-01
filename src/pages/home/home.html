@@ -4,12 +4,12 @@
 <ion-content>
 
   <div class="container">
-    
+    <div class="parent-position-relative"></div>
     <div class="parent-nav">
         <div class="navbar">
           <div class="item">
               <ion-list no-lines>
-                  <ion-item>
+                  <ion-item no-lines>
                       <ion-label floating>Delivery address</ion-label>
                       <ion-input type="text"></ion-input>
                   </ion-item>
@@ -27,8 +27,8 @@
         
           </div>
         </div> 
-        <div class="slider" >
-            <ion-slides pager spaceBetween="-18" centeredSlider>
+        <div class="slider">
+            <ion-slides pager spaceBetween="-15" centeredSlider="true">
                 <ion-slide style="max-width: 100%;" *ngFor="let food of foods">
                     <ion-card>
                       <ion-icon name="heart" class="fas-heart"></ion-icon>
@@ -52,13 +52,41 @@
               </ion-slides>
 
             
-          
+              <div class="icons" padding >
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="pizza" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="beer" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
+               
+              </div>
+              <div class="below" padding>
+                <hr style="color: #dddddd; border: 1px solid #dddddd"/>
+                
+                <div class="restaurant">
+                  <div class="all-restaurant">
+                     <h3>All Restaurent</h3>
+                     <p>Sorted by Fastest Delivery</p>  
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+              
+              
+            
+
+             
         </div>  
-      
+       
     </div>
-    <header>
-        khuthy
-      </header>
+    
   </div>
 
 </ion-content>

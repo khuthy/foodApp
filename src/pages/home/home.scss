@@ -1,4 +1,5 @@
 page-home {
+  
     .container {
         display: flex;
         flex-direction: row;
@@ -9,11 +10,12 @@ page-home {
         .parent-nav {
            
             
-            height: 36vh;
+            height: 40vh;
             width: 100vw;
             background: #FEDC00;
             border-radius: 0 0 80px 80px;
             box-shadow: 0 5px 10px rgba(0,0,0,.16);
+            margin-bottom: auto;
             .parent-nav > div {
                 flex: 1;
             }
@@ -25,17 +27,20 @@ page-home {
                align-items: center;
 
                 .item:nth-child(1) {
-                    flex:3;
+                    flex-basis:90%;
                 }
                 .item:nth-child(2) {
-                    flex: 1;
+                    flex-basis: 5%;
                 }
                 .item:nth-child(3) {
-                  flex: 1;
+                  flex-basis: 5%;
                 } 
             }
           
-
+            ion-slide {
+                max-width: 50%;
+              
+            }
             
             ion-card {
             
@@ -50,6 +55,10 @@ page-home {
             } 
             
         }
+    }
+    .i-fas {
+        color: #FEDC00;
+        
     }
   
     .fas-heart {
@@ -70,16 +79,39 @@ page-home {
     border-radius: 10px;
 
 }
+.box2 {
+    text-align: left;
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.16);
+    max-width:  90%;
+    margin:  0 auto;
 
-@media (min-width: 600px) {
-    .box { top: 65%; left: 5%; right: 5%;}
+}
+
+@media (min-width: 500px) {
+    .box { top: 75%; left: 5%; right: 5%;}
 }
 @media (min-width: 800px) {
-    .box { top: 75%; left: 5%; right: 5%;}
+    .box { top: 80%; left: 5%; right: 5%;}
 }
 .timestamp {
     display: flex;
     justify-content: space-between;
     
+}
+.icons {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 15vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.icons > * {
+    margin: 1%;
 }
 }
