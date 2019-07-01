@@ -1,0 +1,64 @@
+<ion-header>
+  
+</ion-header>
+<ion-content>
+
+  <div class="container">
+    
+    <div class="parent-nav">
+        <div class="navbar">
+          <div class="item">
+              <ion-list no-lines>
+                  <ion-item>
+                      <ion-label floating>Delivery address</ion-label>
+                      <ion-input type="text"></ion-input>
+                  </ion-item>
+                </ion-list>
+          </div>
+          <div class="item">
+        
+                  <button ion-fab mini color="light"><ion-icon name="search"></ion-icon></button>
+              
+          </div>
+          <div class="item">
+             
+             <button ion-fab mini color="light"><ion-icon name="person"></ion-icon></button>
+                  
+        
+          </div>
+        </div> 
+        <div class="slider" >
+            <ion-slides pager spaceBetween="-18" centeredSlider>
+                <ion-slide style="max-width: 100%;" *ngFor="let food of foods">
+                    <ion-card>
+                      <ion-icon name="heart" class="fas-heart"></ion-icon>
+                      <img src="{{food.image}}" alt="{{food.name}}">
+                      <div class="box">
+                        <h3>{{food.title}}</h3>
+                       <article>
+                         <p><small>{{food.subtitle}}</small></p>
+                         <hr style="color: #dddddd; border: 1px solid #dddddd"/>
+                         <div class="timestamp">
+                            <p><ion-icon name="star" style="color: #FEDC00"></ion-icon> {{food.rate}}</p>
+                            <p><ion-icon name="stopwatch"></ion-icon> {{food.cookingTime}}</p>
+                            <p><ion-icon name="paper"></ion-icon> {{food.purchase}}</p>
+                         </div>
+                         
+                       </article>
+                      </div>
+                      <br><br>
+                    </ion-card>
+                </ion-slide>
+              </ion-slides>
+
+            
+          
+        </div>  
+      
+    </div>
+    <header>
+        khuthy
+      </header>
+  </div>
+
+</ion-content>
