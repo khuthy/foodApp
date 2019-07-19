@@ -1,92 +1,94 @@
-<ion-header>
-  
-</ion-header>
-<ion-content>
+ <ion-content color="light">
+      <div class="container">
+        <div class="parent">
+          <div class="navbar">
 
-  <div class="container">
-    <div class="parent-position-relative"></div>
-    <div class="parent-nav">
-        <div class="navbar">
-          <div class="item">
-              <ion-list no-lines>
-                  <ion-item no-lines>
-                      <ion-label floating>Delivery address</ion-label>
-                      <ion-input type="text"></ion-input>
-                  </ion-item>
-                </ion-list>
           </div>
-          <div class="item">
-        
-                  <button ion-fab mini color="light"><ion-icon name="search"></ion-icon></button>
-              
+          <div class="slider-image">
+            <ion-slides spaceBetween="-28">
+            <ion-slide *ngFor="let food of foods;">
+                <img src="{{food.image}}" class="image-thumb">
+              </ion-slide>
+            </ion-slides>
           </div>
-          <div class="item">
-             
-             <button ion-fab mini color="light"><ion-icon name="person"></ion-icon></button>
-                  
-        
-          </div>
-        </div> 
-        <div class="slider">
-            <ion-slides pager spaceBetween="-15" centeredSlider="true">
-                <ion-slide style="max-width: 100%;" *ngFor="let food of foods">
-                    <ion-card>
-                      <ion-icon name="heart" class="fas-heart"></ion-icon>
-                      <img src="{{food.image}}" alt="{{food.name}}">
-                      <div class="box">
-                        <h3>{{food.title}}</h3>
-                       <article>
-                         <p><small>{{food.subtitle}}</small></p>
-                         <hr style="color: #dddddd; border: 1px solid #dddddd"/>
-                         <div class="timestamp">
-                            <p><ion-icon name="star" style="color: #FEDC00"></ion-icon> {{food.rate}}</p>
-                            <p><ion-icon name="stopwatch"></ion-icon> {{food.cookingTime}}</p>
-                            <p><ion-icon name="paper"></ion-icon> {{food.purchase}}</p>
-                         </div>
-                         
-                       </article>
-                      </div>
-                      <br><br>
-                    </ion-card>
-                </ion-slide>
-              </ion-slides>
-
-            
-              <div class="icons" padding >
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="pizza" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="beer" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-                  <div class="icon"><button ion-fab color="light"><ion-icon name="food" class="i-fas"></ion-icon></button></div>
-               
+        </div>
+        <div class="icon-slider">
+          <ion-slides slidesPerView="4" spaceBetween="-35">
+            <ion-slide>
+              <div class="cover">
+                  <button color="light" ion-fab><ion-icon color="secondary" name="pizza"></ion-icon></button>
+                  <p class="text-slider">Asian</p>
               </div>
-              <div class="below" padding>
-                <hr style="color: #dddddd; border: 1px solid #dddddd"/>
-                
-                <div class="restaurant">
-                  <div class="all-restaurant">
-                     <h3>All Restaurent</h3>
-                     <p>Sorted by Fastest Delivery</p>  
-                  </div>
-                  <div></div>
-                </div>
+             
+            </ion-slide>
+
+            <ion-slide>
+              <div class="cover">
+              <button color="light" ion-fab><ion-icon color="secondary" name="search"></ion-icon></button>
+               <p class="text-slider">Asian</p>
               </div>
               
+          </ion-slide>
+
+
+            <ion-slide>
+              <div class="cover">
+                <button color="light" ion-fab><ion-icon color="secondary" name="person"></ion-icon></button>
+                <p class="text-slider">Asian</p>
+              </div>
               
-            
+         </ion-slide>
 
-             
-        </div>  
-       
-    </div>
-    
-  </div>
+            <ion-slide> 
+              <div class="cover">
+            <button color="light" ion-fab><ion-icon color="secondary" name="heart"></ion-icon></button>
+              <p class="text-slider">Asian</p>
+              </div>
+              
+         </ion-slide>
+            <ion-slide> 
+              <div class="cover">
+              <button color="light" ion-fab><ion-icon color="secondary" name="logo-googleplus"></ion-icon></button>
+              <p class="text-slider">Asian</p>
+              </div>
+              
+        </ion-slide>
+        <ion-slide> 
+          <div class="cover">
+            <button color="light" ion-fab><ion-icon color="secondary" name="logo-googleplus"></ion-icon></button>
+            <p class="text-slider">Asian</p>
+          </div>
+          
+     </ion-slide>
+ </ion-slides>
+          
+        </div>
+        <div class="tomb">
+          <div class="choices">
+            <div class="searches">
+               <article>
+              <p><strong>All Restaurants</strong></p>
+              <p>Sorted by fastest Deliveries</p>
+            </article>
+            </div>
+           
+            <div class="option">
+                 <button ion-fab mini color="light"><ion-icon name="options"></ion-icon></button>
+         
+            </div>
+          </div>
+          <div class="media">
+            <div class="title">
+              <div class="text">khuthy</div>
+              <div class="text">khuthy</div>
+            </div>
+            <div class="ratings">
+              <div class="rates">khuthy</div>
+              <div class="rates">khuthg</div>
+              <div class="rates">khuthy</div>
+            </div>
+          </div>
+        </div>
 
-</ion-content>
+      </div> 
+  </ion-content>
